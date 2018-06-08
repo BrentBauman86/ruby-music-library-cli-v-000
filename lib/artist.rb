@@ -10,7 +10,7 @@ class Artist
 
   def initialize(name)
     @name = name
-    @@all << self 
+    @@all << self
     @songs = []
   end
 
@@ -27,7 +27,7 @@ class Artist
   end
 
   def self.create(name)
-    create = new(name)
+    create = self.new(name)
     create.save
     create
   end

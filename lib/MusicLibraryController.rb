@@ -73,4 +73,4 @@ end
   end
 end
 
-  "list songs"
+  "list songs".list_songs

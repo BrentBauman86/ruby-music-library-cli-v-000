@@ -26,7 +26,7 @@ class MusicLibraryController
 
       user = gets.strip
 
-
+end 
     end
   end
 

@@ -2,13 +2,12 @@ require "pry"
 class Song
 
   attr_accessor :name, :artist, :genre
-  attr_reader :artist, :genre
 
   @@all = []
 
   def initialize(name, artist = nil, genre = nil)
     @name = name
-    # @@all << self
+    @@all
     self.artist = artist if artist
     self.genre = genre if genre
   end
@@ -26,7 +25,7 @@ class Song
   end
 
   def self.create(name)
-    create = new(name)
+    create = self.new(name)
     create.save
     create
   end
@@ -46,26 +45,36 @@ class Song
   end
 
   def self.find_by_name(name)
-    @@all.find{|song| song.name == name}
+    @@all.find {|song| song.name == name}
   end
-
+  
   def self.find_or_create_by_name(name)
-  if find_this = self.find_by_name(name)
-        find_this
+    if self.find_by_name(name)
+        self.find_by_name(name)
     else
       self.create(name)
     end
   end
 
-  def self.new_from_filename(filename)
-    artist, song, genre_name = filename.split(" - ")
-    name = genre_name.gsub(".mp3", "")
-    artist = Artist.find_or_create_by_name(artist)
-    genre = Genre.find_or_create_by_name(name)
-    new(song, artist, genre)
-  end
+  def self.new_from_filename(file_name)
+    song_name = file_name.split(" - ")[1]
+    song_name = Song.new_from_filename(file_name)
+    song_name
 
-  def self.create_from_filename(name)
-    self.new_from_filename(name).save
+  # binding.pry
   end
 end
+
+
+
+# def self.find_by_name(name)
+#   @@all.find {|song| song.name == name}
+# end
+#
+# def self.find_or_create_by_name(name)
+#   if self.find_by_name(name)
+#       self.find_by_name(name)
+#   else
+#     self.create(name)
+#   end
+# end

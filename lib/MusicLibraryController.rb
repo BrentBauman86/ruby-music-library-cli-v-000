@@ -73,6 +73,4 @@ end
   end
 end
 
-  user = gets.strip
-  "list songs"(user)
-gets.strip
+

@@ -56,12 +56,12 @@ end
   def list_songs_by_genre
     puts "Please enter the name of a genre:"
     user = gets.strip
-binding.pry
+binding.pry 
     # if genre = Genre.find_by_name(user)
     #   genre.songs.sort_by(&:name).each.with_index(1) do |genre, index|
     #     puts "#{index}. #{song.artist.name} - #{song.name}"
     # end
-  end
+  # end
 end
 
   def play_song

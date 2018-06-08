@@ -73,6 +73,6 @@ end
   end
 end
 
-  user = gets.strip 
-  "list songs" = list_songs
+  user = gets.strip
+  "list songs"
 gets.strip

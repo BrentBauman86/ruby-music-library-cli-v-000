@@ -74,5 +74,5 @@ end
 end
 
   user = gets.strip
-  "list songs"
+  "list songs"(user)
 gets.strip

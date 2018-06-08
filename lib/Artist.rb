@@ -39,5 +39,6 @@ class Artist
 
   def genres
     songs.collect(&:genre).uniq
+binding.pry 
   end
 end

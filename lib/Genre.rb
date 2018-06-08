@@ -31,7 +31,7 @@ class Genre
     create.save
     create
   end
-  
+
   def songs
     @songs
   end

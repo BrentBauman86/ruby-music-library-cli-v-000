@@ -32,9 +32,9 @@ class Genre
     create
   end
 
-  def songs
-    @songs
-  end
+  # def songs
+  #   @songs
+  # end
 
   def artists
 songs.map(&:artist).uniq

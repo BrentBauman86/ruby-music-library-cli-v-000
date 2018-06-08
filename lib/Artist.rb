@@ -37,6 +37,11 @@ class Artist
     song.artist = self if song.artist != self
   end
 
+def songs
+  @songs
+end
+
+
   def genres
   songs.map(&:genre).uniq
     # Song.all.collect {|song| song.genre}.uniq

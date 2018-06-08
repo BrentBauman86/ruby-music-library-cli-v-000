@@ -58,7 +58,7 @@ end
 # binding.pry
     if genre = Genre.find_by_name(user)
       genre.songs.sort_by(&:name).each.with_index(1) do |genre, index|
-        puts "#{index}. #{song.artist.name} - #{song.name}"
+        puts "#{index}. #{song.name} - #{song.artist.name}"
     end
   end
 end

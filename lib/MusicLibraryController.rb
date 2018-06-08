@@ -23,7 +23,7 @@ class MusicLibraryController
       case user
       when "list songs"
         list_songs
-      end 
+      end
     end
   end
 

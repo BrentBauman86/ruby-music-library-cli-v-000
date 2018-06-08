@@ -20,6 +20,16 @@ class MusicLibraryController
       puts "What would you like to do?"
 
       user = gets.strip
+
+    when "list songs"
+      list_songs
+    when "list artists"
+      list_artists
+    when "list genres"
+      list_genres
+
+
+
     end
   end
 
@@ -72,3 +82,5 @@ end
       puts "Playing #{song.name} by #{song.artist.name}" if song
   end
 end
+
+  

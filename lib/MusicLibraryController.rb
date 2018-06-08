@@ -73,4 +73,4 @@ end
   end
 end
 
-  "list songs".list_songs
+  "list songs" = list_songs

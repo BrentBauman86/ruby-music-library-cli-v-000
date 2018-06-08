@@ -55,7 +55,7 @@ end
   def list_songs_by_genre
     puts "Please enter the name of a genre:"
     user = gets.strip
-# binding.pry
+
     if genre = Genre.find_by_name(user)
       genre.songs.sort_by(&:name).each.with_index(1) do |song, index|
         puts "#{index}. #{song.artist.name} - #{song.name}"
@@ -69,6 +69,6 @@ end
     if (1..Song.all.length).include?(user)
       song = Song.all.sort_by(&:name)[user - 1]
     end
-    puts "Playing #{song.name} by #{song.artist.name}" if song
+      puts "Playing #{song.name} by #{song.artist.name}" if song
   end
 end
